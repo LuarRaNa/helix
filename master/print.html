@@ -550,8 +550,8 @@ and <a href="./usage.html#textobject">textobject</a> usage.</p>
 <tr><td><code>k</code></td><td>Show documentation for item under cursor in a <a href="keymap.html#popup">popup</a> (<strong>LSP</strong>)</td><td><code>hover</code></td></tr>
 <tr><td><code>s</code></td><td>Open document symbol picker (<strong>LSP</strong>)</td><td><code>symbol_picker</code></td></tr>
 <tr><td><code>S</code></td><td>Open workspace symbol picker (<strong>LSP</strong>)</td><td><code>workspace_symbol_picker</code></td></tr>
-<tr><td><code>g</code></td><td>Open document diagnosics picker (<strong>LSP</strong>)</td><td><code>diagnostics_picker</code></td></tr>
-<tr><td><code>G</code></td><td>Open workspace diagnostics picker (<strong>LSP</strong>)</td><td><code>workspace_diagnosics_picker</code></td></tr>
+<tr><td><code>g</code></td><td>Open document diagnostics picker (<strong>LSP</strong>)</td><td><code>diagnostics_picker</code></td></tr>
+<tr><td><code>G</code></td><td>Open workspace diagnostics picker (<strong>LSP</strong>)</td><td><code>workspace_diagnostics_picker</code></td></tr>
 <tr><td><code>r</code></td><td>Rename symbol (<strong>LSP</strong>)</td><td><code>rename_symbol</code></td></tr>
 <tr><td><code>a</code></td><td>Apply code action  (<strong>LSP</strong>)</td><td><code>code_action</code></td></tr>
 <tr><td><code>'</code></td><td>Open last fuzzy picker</td><td><code>last_picker</code></td></tr>
@@ -798,6 +798,7 @@ Languages</a> guide for more language configuration information.</p>
 <tr><td>hcl</td><td>✓</td><td></td><td>✓</td><td><code>terraform-ls</code></td></tr>
 <tr><td>heex</td><td>✓</td><td></td><td></td><td></td></tr>
 <tr><td>html</td><td>✓</td><td></td><td></td><td><code>vscode-html-language-server</code></td></tr>
+<tr><td>idris</td><td></td><td></td><td></td><td><code>idris2-lsp</code></td></tr>
 <tr><td>iex</td><td>✓</td><td></td><td></td><td></td></tr>
 <tr><td>java</td><td>✓</td><td></td><td></td><td><code>jdtls</code></td></tr>
 <tr><td>javascript</td><td>✓</td><td></td><td>✓</td><td><code>typescript-language-server</code></td></tr>
@@ -1192,7 +1193,12 @@ over it and is merged into the default palette.</p>
 <li><code>operator</code> - <code>or</code>, <code>in</code></li>
 <li><code>directive</code> - Preprocessor directives (<code>#if</code> in C) </li>
 <li><code>function</code> - <code>fn</code>, <code>func</code></li>
-<li><code>storage</code> - Keywords that affect the storage of a variable, function or data structure <code>static</code>, <code>mut</code>, <code>const</code>, <code>ref</code></li>
+<li><code>storage</code> - Keywords describing how things are stored
+<ul>
+<li><code>type</code> - The type of something, <code>class</code>, <code>function</code>, <code>var</code>, <code>let</code>, etc. </li>
+<li><code>modifier</code> - Storage modifiers like <code>static</code>, <code>mut</code>, <code>const</code>, <code>ref</code>, etc.</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
